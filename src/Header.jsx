@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import './Header.css'
 const navItems = [
   { to: "/", label: "Home" },
@@ -13,9 +13,7 @@ export default function Header() {
         <ul>
           {navItems.map((item) => (
             <li key={item.to}>
-              <NavLink to={item.to} end={item.to === "/"}>
-                {item.label}
-              </NavLink>
+              <Link to={item.to}>{item.label}</Link>
             </li>
           ))}
         </ul>
